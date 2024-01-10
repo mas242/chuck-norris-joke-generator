@@ -15,8 +15,16 @@ function App() {
     });
   };
 
+    // //messing with trying to call another localhost api.
+    // const getJoke = () => {
+    //   Axios.get("https://localhost:7167/WeatherForecast").then((response) => {
+    //     console.log(response);
+    //     setJoke(response.data.summary);
+    //   });
+    // };
+
   //api call fetch method way
-  const getJoke2 = () => {
+  const getJoke2 = () => { 
     fetch("https://api.chucknorris.io/jokes/random")
       .then((response) => response.json())
       .then((data) => {
@@ -41,5 +49,5 @@ function App() {
     </div>
   );
 }
-
+ 
 export default App;
